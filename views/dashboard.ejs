@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs')%>
+        <link type="text/css" href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('./partials/dashboard-navbar.ejs') %>
+        <button class="appointment-button" type="button">
+        <img src="static/plus.png" >
+        <a href="#">Schedule an Appointment</a>
+    </button>
+        <section class="dashboard-grid ">
+            <div class="grid-item upper-grid-item"><img src="static/time.png" style="height: 70px;">
+                <div class="upper-grid-item-text">
+                    <h1>$200</h1>
+                    <p>Credits</p>
+                </div>
+            </div>
+            <div class="grid-item upper-grid-item"><img src="static/time.png" style="height: 70px;">
+                <div class="upper-grid-item-text">
+                    <h1>62</h1>
+                    <p>Consulting Hours</p>
+                </div>
+            </div>
+            <div class="grid-item upper-grid-item"><img src="static/consultanticon.png" style="height: 70px;">
+                <div class="upper-grid-item-text">
+                    <h1>10</h1>
+                    <p>Consultants</p>
+                </div>
+            </div>
+            <div class="grid-item lower-grid-item">Upcoming Appointments
+                <hr class="bottom-grid-hr">
+            </div>
+            <div class="grid-item lower-grid-item">Consultation by Topic
+                <hr class="bottom-grid-hr">
+            </div>
+            <div class="grid-item lower-grid-item">Consultants Engaged
+                <hr class="bottom-grid-hr">
+
+            </div>
+        </section>
+
+
+
+</body>
+
+</html>

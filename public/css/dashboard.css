@@ -1,0 +1,154 @@
+:root {
+    --primarycolor: #007aff;
+    --offwhite: rgba(248, 248, 251, 255);
+    /* offwhite hex:#f8f8fb */
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    /* margin-left: 16%; for dynamic length */
+    margin-left: 230px;
+    background-color: #f8f8fb;
+}
+
+.logo {
+    margin: 15% 15%;
+}
+
+nav {
+    border-top-right-radius: 50px;
+    background-color: var(--primarycolor);
+    height: 100%;
+    /* width: 16%; for dynamic length */
+    width: 230px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+nav li {
+    display: flex;
+    flex-direction: row;
+}
+
+nav a,
+nav a:visited {
+    font-size: 16px;
+    color: #BABEC8;
+    text-decoration: none;
+}
+
+nav svg {
+    color: black;
+}
+
+nav li p {
+    display: inline;
+    position: fixed;
+    margin-top: 2.5px;
+    margin-left: 15px;
+}
+
+nav a:hover svg,
+nav a:hover {
+    color: #f8f8fb;
+}
+
+nav ul li {
+    margin-left: 16%;
+    margin-top: 20px;
+}
+
+.dashboard-grid {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 25% auto auto;
+    grid-template-rows: 1fr 4fr;
+    background-color: var(--offwhite);
+    gap: 2rem;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: left;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.upper-grid-item {
+    padding: 40px 50px;
+    display: flex;
+    color: #A6ACBE;
+}
+
+.upper-grid-item h1 {
+    font-size: 30px;
+    color: black;
+}
+
+.upper-grid-item-text>* {
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+.lower-grid-item {}
+
+.appointment-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.appointment-button {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    display: flex;
+    border: 3px solid var(--primarycolor);
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--primarycolor);
+}
+
+.appointment-button:hover {
+    border: 3px solid black;
+}
+
+.appointment-button:hover a {
+    color: black;
+}
+
+.appointment-button img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.upper-nav {
+    min-height: calc(100vh - 375px);
+}
+
+.bottom-nav {
+    flex: 1;
+}
+
+.bottom-grid-hr {
+    border: 1px solid #EEF0F6;
+    margin: 20px -20px;
+}

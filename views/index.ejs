@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs')%>
+        <link type="text/css" href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <br>
+    <nav>
+        <p style="display:inline;">
+            <a href="#"><img src="static/logo.png" alt="Embiggen Group" id="logo"></a>
+        </p>
+        <ul>
+
+            <li><button class="nav_button button1 " type="button" onclick="document.getElementById('id01').style.display='flex'">SIGN-UP</button></li>
+            <li><button class="nav_button button2" type="button"><a href="/dashboard">LOGIN</a></button></li>
+            <li><a class="nav_text" href="#">BE AN EXPERT</a></li>
+            <li><a class="nav_text " href="#">FIND AN EXPERT</a></li>
+        </ul>
+    </nav>
+
+    <div id="search_div">
+        <p style="margin:0px; font-size: 60px;">On-Demand Consulting Services</p>
+        <p style="margin-top:10px; margin-bottom:50px; font-size: 30px;">Connect with Embiggen's Network of Innovation, Foresight,<br> and Impact Experts for Strategic Advisory and 1:1 Mentorship</p>
+        <form>
+            <div id="search_form">
+                <img src="static/search button.png" alt="Search" id="search_image">
+                <input type="text" placeholder="Search by company, language, or role" id="search_by">
+                <p style="margin:0px; color: rgb(182, 182, 182); font-size:24px; display:inline;">|</p>
+                <input type="text" placeholder="Expertise" id="expertise">
+                <button type="submit " id="search_button">SEARCH</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content animate" action="">
+            <div class="bluedisplay">
+                <h2>Expert Advisory,<br>Anytime and Anywhere.</h2>
+
+            </div>
+            <div class="container">
+                <h1 style="margin:2.5% auto 0%;">Create Account</h1>
+                <div class="inputforms">
+                    <div class="formContainer">
+                        <h4>First Name</h4>
+                        <input type="text" name="uname" required>
+                        <h4>Email or Phone Number</h4>
+                        <input type="text" required>
+                        <h4>Password</h4>
+                        <input type="text" required>
+
+                    </div>
+                    <div class="formContainer">
+                        <h4>Last Name</h4>
+                        <input type="text" name="psw" required>
+
+                        <h4>Date of birth</h4>
+                        <input type="date" required>
+
+                        <h4>Confirm Password</h4>
+                        <input type="text" required>
+
+                    </div>
+                </div>
+                <a href="" style="float: right; margin-right:20px; margin-top: 5px;">Forgot Password?</a>
+
+                <br>
+                <input type="checkbox" name="remember">
+                <label for="remember">Remember me</label><br>
+                <input type="checkbox" name="termsandpp">
+                <label for="termsandpp">I agree to all the <a href="">Terms</a> and <a href="">Privacy and Policy</a></label>
+
+
+
+
+                <div class="buttondiv" style="display: flex;">
+                    <button type="submit" value="Login" id="createaccount">Create Account</button>
+                    <button type="submit" value="Register" id="signgoogle"><img src="https://img.icons8.com/fluency/48/000000/google-logo.png"/>Sign-in with Google</button>
+                </div>
+                <br>
+
+                <h3 style="display:flex; color: black; justify-content: center; align-items: center;">Have an account?&nbsp <a href=""> Log-in</a></h3>
+            </div>
+        </form>
+    </div>
+    <script src="/login.js"></script>
+
+
+</body>
+
+</html>
