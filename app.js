@@ -1,14 +1,31 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+const User = require('./models/user');
 
-//  localhost port
-app.listen(3000);
+// connect to mongodb
+const dbURI = 'mongodb+srv://db-username:test1234@nodetest.woyzf.mongodb.net/testdb?retryWrites=true&w=majority';
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then((result) => app.listen(3000))
+    .catch((err) => console.log(err));
+
 
 // Enables views to use files under public directory
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 // set view engine
 app.set('view engine', 'ejs');
+
+// app.get('/new-user', (req, res) => {
+//     const user = new User({
+
+//     });
+
+//     user.save()
+//         .then((result) => {
+
+//         }).catch((err) => console.log(err));
+// });
 
 
 app.get('/', (req, res) => {
