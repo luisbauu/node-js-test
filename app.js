@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const User = require('./models/user');
 
 // connect to mongodb
-const dbURI = 'mongodb+srv://db-username:test1234@nodetest.woyzf.mongodb.net/testdb?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://user:password@nodetest.woyzf.mongodb.net/testdb?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => app.listen(3000))
     .catch((err) => console.log(err));
